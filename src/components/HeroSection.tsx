@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import { ArrowRight, Timer } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -8,14 +9,34 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Column: Text content */}
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
+            <div className="flex items-center gap-2 mb-4">
+              <Timer className="h-5 w-5 text-primary animate-pulse" />
+              <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
+                Only 4 slots remaining at 30% discount!
+              </span>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-              Your Path to <span className="text-primary">Passive Income</span> Starts Here
+              Master <span className="text-primary">Digital Marketing</span> & Earn Passive Income
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Learn how students, professionals & homemakers earn from home with our proven methods and expert guidance.
+              Join 2.5 Lakh+ students across India who are earning thousands and lakhs monthly through our affiliate marketing program and freelancing opportunities.
             </p>
-            <Button className="btn-primary text-lg py-6 px-10 animate-pulse-light">
-              Join the Program Now
+            
+            <div className="mb-6 bg-gray-100 p-4 rounded-lg">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <span className="text-gray-500 line-through">₹15,999</span>
+                <span className="text-2xl md:text-3xl font-bold text-primary">₹10,999</span>
+                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium">
+                  Save ₹5,000
+                </span>
+              </div>
+              <p className="text-sm text-gray-600">Lifetime access • One-time payment</p>
+            </div>
+            
+            <Button className="btn-primary text-lg py-6 px-10 flex items-center gap-2 rounded-full animate-pulse-light">
+              <span>Secure Your Slot Now</span>
+              <ArrowRight className="h-5 w-5" />
             </Button>
           </div>
           
@@ -28,6 +49,12 @@ const HeroSection = () => {
                 alt="Confident learner on laptop" 
                 className="rounded-2xl shadow-xl w-full h-auto object-cover relative z-10 animate-float"
               />
+              
+              {/* Testimonial badge */}
+              <div className="absolute -bottom-6 -right-6 bg-white px-4 py-3 rounded-lg shadow-lg z-20 max-w-[250px]">
+                <p className="text-sm font-medium">"I started earning ₹50K/month after just 3 months!"</p>
+                <p className="text-xs text-gray-500 mt-1">- Arun, Kerala</p>
+              </div>
             </div>
           </div>
         </div>

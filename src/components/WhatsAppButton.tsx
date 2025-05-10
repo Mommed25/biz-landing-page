@@ -1,27 +1,64 @@
 
 import { Phone } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
+  // Handle scroll events to show/hide button
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // If scrolling down more than 50px, hide the button
+      if (currentScrollY > lastScrollY + 50) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY - 10) {
+        // If scrolling up, show the button
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+  
+  // Pulse effect
+  const [isPulsing, setIsPulsing] = useState(false);
+  
+  useEffect(() => {
+    // Create periodic pulse effect
+    const interval = setInterval(() => {
+      setIsPulsing(true);
+      setTimeout(() => setIsPulsing(false), 1000);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
   
   return (
     <a
-      href="https://wa.me/919876543210?text=I'm%20interested%20in%20learning%20more%20about%20the%20Income%20Masters%20program"
-      className="fixed bottom-6 right-6 z-50"
+      href="https://wa.me/919876543210?text=I'm%20interested%20in%20learning%20more%20about%20the%20Digital%20Marketing%20course%20with%20the%20early%20bird%20offer"
+      className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex items-center">
-        {isHovered && (
+        {(isHovered || isPulsing) && (
           <div className="mr-3 bg-white text-gray-800 py-2 px-4 rounded-l-full shadow-lg animate-fade-in">
-            <span className="font-medium">Talk to a Mentor</span>
-            <p className="text-xs">Malayalam support available</p>
+            <span className="font-medium">Last few slots left!</span>
+            <p className="text-xs">Talk to a mentor now</p>
           </div>
         )}
-        <div className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center">
+        <div 
+          className={`bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isPulsing ? 'scale-110' : ''}`}
+        >
           <Phone className="h-6 w-6" />
         </div>
       </div>
