@@ -9,24 +9,28 @@ import {
 const WhatYouLearnSection = () => {
   const learningModules = [
     {
-      title: "Instagram Growth & Reels",
-      content: "Learn how to grow your Instagram following from zero and create engaging reels that capture attention. Master algorithms and engagement strategies that can help you build a valuable audience."
+      title: "Social Media Marketing",
+      content: "Learn how to leverage different social media platforms to grow your brand presence, engage with your audience, and convert followers into customers."
+    },
+    {
+      title: "Facebook & Google Ads",
+      content: "Master paid advertising on the two biggest platforms to reach targeted audiences, drive traffic, and generate leads with effective campaigns and budget optimization."
+    },
+    {
+      title: "Search Engine Optimisation",
+      content: "Understand how to rank your websites higher on search engines, drive organic traffic, and implement effective keyword strategies for better visibility."
+    },
+    {
+      title: "Website Development",
+      content: "Learn to build and optimize websites that convert visitors into customers, with focus on user experience, responsive design, and conversion optimization."
+    },
+    {
+      title: "Content & Copywriting",
+      content: "Master the art of creating compelling content that engages your audience and persuasive copy that drives action and increases conversions."
     },
     {
       title: "Affiliate Marketing",
       content: "Discover how to earn commissions by promoting products you love. Learn product selection, conversion strategies, and how to build passive income streams through strategic partnerships."
-    },
-    {
-      title: "Personal Branding",
-      content: "Build a powerful personal brand that attracts opportunities. Learn how to position yourself as an authority in your niche and create content that resonates with your target audience."
-    },
-    {
-      title: "Content Strategy & Monetization",
-      content: "Create content that not only engages but also converts. Learn various monetization methods including sponsorships, digital products, and service offerings tailored to your audience."
-    },
-    {
-      title: "Community Building",
-      content: "Build a loyal community around your brand. Learn how to foster engagement, create valuable interactions, and develop a tribe that supports your business growth."
     }
   ];
 

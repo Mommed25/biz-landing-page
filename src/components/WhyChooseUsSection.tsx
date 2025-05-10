@@ -1,22 +1,27 @@
 
-import { MessageCircle, Book, Gift } from 'lucide-react';
+import { Clock, Award, Users, HandHeart } from 'lucide-react';
 
 const WhyChooseUsSection = () => {
   const benefits = [
     {
-      icon: Book,
-      title: 'Lifetime Access',
-      description: 'One-time payment for unlimited access to 50+ hours of comprehensive digital marketing courses'
+      icon: Clock,
+      title: 'Lifetime Validity',
+      description: 'One-time payment for unlimited access to our comprehensive digital marketing courses forever'
     },
     {
-      icon: MessageCircle,
-      title: 'Proven Results',
-      description: '2.5 Lakh+ students across India with many earning thousands to lakhs monthly'
+      icon: Award,
+      title: 'Industry Recognised Certificate',
+      description: 'Receive a professional certificate that adds value to your resume and credibility to your skills'
     },
     {
-      icon: Gift,
-      title: 'Complete Training',
-      description: 'Full affiliate marketing program plus freelancing opportunities with upskilling courses'
+      icon: Users,
+      title: 'Private Community Access',
+      description: 'Join our exclusive community of enrolled students for networking, support, and growth opportunities'
+    },
+    {
+      icon: HandHeart,
+      title: 'Complete Income Training',
+      description: 'Learn how to earn thousands as passive income with our detailed, step-by-step affiliate marketing program'
     }
   ];
 
@@ -26,7 +31,7 @@ const WhyChooseUsSection = () => {
         <h2 className="section-title">Why Choose Us</h2>
         <p className="section-subtitle">We focus on practical skills that generate real income through digital marketing</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
