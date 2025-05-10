@@ -42,7 +42,7 @@ const WhatsAppButton = () => {
   
   return (
     <a
-      href="https://wa.me/919876543210?text=I'm%20interested%20in%20learning%20more%20about%20the%20Digital%20Marketing%20course%20with%20the%20early%20bird%20offer"
+      href="https://wa.me/919876543210?text=I'm%20interested%20in%20the%20Digital%20Marketing%20course%20with%20affiliate%20program.%20Please%20reserve%20my%20early%20bird%20slot!"
       className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -52,8 +52,8 @@ const WhatsAppButton = () => {
       <div className="flex items-center">
         {(isHovered || isPulsing) && (
           <div className="mr-3 bg-white text-gray-800 py-2 px-4 rounded-l-full shadow-lg animate-fade-in">
-            <span className="font-medium">Last few slots left!</span>
-            <p className="text-xs">Talk to a mentor now</p>
+            <span className="font-medium">Only 4 slots left at 30% off!</span>
+            <p className="text-xs">Get lifetime access now</p>
           </div>
         )}
         <div 

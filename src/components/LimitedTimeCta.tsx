@@ -39,12 +39,12 @@ const LimitedTimeCta = ({
           <div className="flex items-center gap-2 mb-2">
             <Timer className="h-5 w-5 text-primary animate-pulse" />
             <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
-              Only {remainingSlots} slots remaining!
+              Only {remainingSlots} slots remaining at 30% off!
             </span>
           </div>
           
           <h3 className="text-xl md:text-2xl font-bold mb-2">
-            30% Early Bird Discount Ending Soon
+            Limited Time Early Bird Discount
           </h3>
           
           <div className="flex items-center gap-3 mb-4">
@@ -70,7 +70,7 @@ const LimitedTimeCta = ({
               isPulsing ? "scale-105 shadow-xl" : "",
             )}
           >
-            <span>Enroll Now</span>
+            <span>Secure Your Slot Now</span>
             <Zap className={cn(
               "h-5 w-5 transition-all",
               isPulsing ? "scale-125" : ""

@@ -5,25 +5,25 @@ import { Button } from '@/components/ui/button';
 
 const testimonials = [
   {
-    quote: "I started earning ₹15,000/month as a student! This program changed my life by giving me financial independence while still in college.",
+    quote: "I started earning ₹15,000/month as a student! This digital marketing course gave me financial independence while still in college.",
     name: "Asha",
     location: "Calicut",
     avatar: "https://randomuser.me/api/portraits/women/45.jpg"
   },
   {
-    quote: "As a homemaker, I never thought I could contribute to family finances. Now I make ₹25,000 monthly working just 2 hours daily on Instagram marketing.",
+    quote: "As a homemaker, I now make ₹25,000 monthly working just 2 hours daily with the affiliate marketing skills I learned here.",
     name: "Rajesh",
     location: "Kochi",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    quote: "After 5 years in IT, I was burnt out. This program helped me build a side hustle that now earns more than my corporate job - with half the stress!",
+    quote: "After 5 years in IT, I was burnt out. This program helped me build a side hustle that now earns more than my corporate job!",
     name: "Priya",
     location: "Trivandrum",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg"
   },
   {
-    quote: "The affiliate marketing module alone helped me generate ₹40,000 in my first month. The strategies are practical and actually work!",
+    quote: "The affiliate marketing module alone helped me generate ₹40,000 in my first month. Now I'm earning over a lakh monthly!",
     name: "Sanjay",
     location: "Thrissur",
     avatar: "https://randomuser.me/api/portraits/men/64.jpg"
@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-20 bg-gray-50">
       <div className="container-custom">
         <h2 className="section-title">Success Stories</h2>
-        <p className="section-subtitle">Real results from real people just like you</p>
+        <p className="section-subtitle">Join thousands of students already earning through our program</p>
         
         <div className="max-w-4xl mx-auto mt-12 relative">
           {/* Testimonial Card */}

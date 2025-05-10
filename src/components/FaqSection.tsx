@@ -9,28 +9,28 @@ import {
 const FaqSection = () => {
   const faqs = [
     {
-      question: "Do I need prior knowledge to start this program?",
+      question: "Do I need prior knowledge to start this digital marketing course?",
       answer: "No, our program is designed for complete beginners. We start from the basics and gradually build up to advanced strategies. No technical or marketing knowledge is required to get started."
     },
     {
-      question: "Can I do this part-time while studying or working?",
-      answer: "Absolutely! Most of our successful students started part-time, putting in just 1-2 hours daily. The course is self-paced, and you can access the content at your convenience."
+      question: "How do I access the course after enrollment?",
+      answer: "Once enrolled, you get lifetime access to all course materials. This means you can learn at your own pace and revisit lessons whenever you need to refresh your knowledge."
     },
     {
-      question: "Is this program suitable for beginners?",
-      answer: "Yes, this program is specifically designed for beginners. We guide you step-by-step from the fundamentals to advanced techniques without assuming any prior knowledge."
+      question: "How does the affiliate marketing program work?",
+      answer: "Our affiliate marketing program provides complete training on how to promote products and earn commissions. Many of our students earn thousands to lakhs monthly through this program alone."
     },
     {
-      question: "How long will it take to start earning?",
-      answer: "While results vary based on effort and implementation, many of our students start seeing initial results within 4-6 weeks of consistently applying the strategies we teach."
+      question: "What freelancing opportunities are available after completing the course?",
+      answer: "The upskilling courses included in our program prepare you for various freelancing opportunities including content creation, social media management, digital marketing consulting, and more."
+    },
+    {
+      question: "How long will it take to start earning from the affiliate program?",
+      answer: "While results vary based on effort and implementation, many of our 2.5 lakh+ students start seeing initial results within 4-6 weeks of consistently applying the strategies we teach."
     },
     {
       question: "Do you offer support after enrollment?",
-      answer: "Yes, we provide 6 months of dedicated support through our community platform and weekly Q&A sessions where you can get your questions answered by our expert mentors."
-    },
-    {
-      question: "Is the content available in Malayalam?",
-      answer: "Yes, we offer bilingual instruction with content available in both English and Malayalam to ensure maximum understanding and convenience for all students."
+      answer: "Yes, we provide dedicated support through our community platform where you can interact with trainers and fellow students. You'll be part of our community of 2.5 lakh+ students across India."
     }
   ];
 
@@ -38,7 +38,7 @@ const FaqSection = () => {
     <section id="faq" className="py-20 bg-white">
       <div className="container-custom">
         <h2 className="section-title">Frequently Asked Questions</h2>
-        <p className="section-subtitle">Get answers to the most common questions</p>
+        <p className="section-subtitle">Get answers to the most common questions about our digital marketing course</p>
         
         <div className="max-w-3xl mx-auto mt-10">
           <Accordion type="single" collapsible className="w-full">

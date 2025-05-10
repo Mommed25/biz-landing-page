@@ -31,7 +31,7 @@ const HeroSection = () => {
                   Save ₹5,000
                 </span>
               </div>
-              <p className="text-sm text-gray-600">Lifetime access • One-time payment</p>
+              <p className="text-sm text-gray-600">Lifetime access • One-time payment • Limited time offer</p>
             </div>
             
             <Button className="btn-primary text-lg py-6 px-10 flex items-center gap-2 rounded-full animate-pulse-light">
@@ -46,7 +46,7 @@ const HeroSection = () => {
               <div className="absolute -top-6 -left-6 w-full h-full bg-primary/10 rounded-2xl transform rotate-3"></div>
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Confident learner on laptop" 
+                alt="Digital Marketing Student" 
                 className="rounded-2xl shadow-xl w-full h-auto object-cover relative z-10 animate-float"
               />
               

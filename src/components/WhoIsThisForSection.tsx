@@ -6,22 +6,22 @@ const WhoIsThisForSection = () => {
     {
       icon: Users,
       title: 'Students',
-      description: 'Looking for extra income while studying'
+      description: 'Looking to earn passive income while studying'
     },
     {
       icon: Briefcase,
       title: 'Professionals',
-      description: 'Stuck in 9-5 jobs seeking more freedom'
+      description: 'Wanting to build additional income streams'
     },
     {
       icon: PenTool,
       title: 'Freelancers',
-      description: 'With unstable income wanting consistency'
+      description: 'Seeking to expand skills and client base'
     },
     {
       icon: Home,
       title: 'Homemakers',
-      description: 'Dreaming of financial independence'
+      description: 'Aiming to earn from home with flexible hours'
     }
   ];
 
@@ -29,7 +29,7 @@ const WhoIsThisForSection = () => {
     <section id="about" className="py-20 bg-white">
       <div className="container-custom">
         <h2 className="section-title">Is This You?</h2>
-        <p className="section-subtitle">Our program is designed for motivated individuals from all walks of life</p>
+        <p className="section-subtitle">Join 2.5 Lakh+ students already earning through our digital marketing and affiliate program</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {items.map((item, index) => (

@@ -5,18 +5,18 @@ const WhyChooseUsSection = () => {
   const benefits = [
     {
       icon: Book,
-      title: '50+ Hours of Lessons',
-      description: 'Comprehensive video courses covering every aspect of online income generation'
+      title: 'Lifetime Access',
+      description: 'One-time payment for unlimited access to 50+ hours of comprehensive digital marketing courses'
     },
     {
       icon: MessageCircle,
-      title: 'Top Mentors & Trainers',
-      description: 'Learn from industry experts who are actively earning through these methods'
+      title: 'Proven Results',
+      description: '2.5 Lakh+ students across India with many earning thousands to lakhs monthly'
     },
     {
       icon: Gift,
-      title: 'Real Income Case Studies',
-      description: 'See real examples of students who went from zero to consistent monthly income'
+      title: 'Complete Training',
+      description: 'Full affiliate marketing program plus freelancing opportunities with upskilling courses'
     }
   ];
 
@@ -24,7 +24,7 @@ const WhyChooseUsSection = () => {
     <section className="py-20 bg-white">
       <div className="container-custom">
         <h2 className="section-title">Why Choose Us</h2>
-        <p className="section-subtitle">We focus on practical skills and proven methods that work in the real world</p>
+        <p className="section-subtitle">We focus on practical skills that generate real income through digital marketing</p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
           {benefits.map((benefit, index) => (

@@ -11,26 +11,26 @@ const BonusesSection = () => {
   const bonuses = [
     {
       icon: PenTool,
-      title: 'Influencer Toolkit',
-      description: 'Complete set of templates, scripts, and tools to accelerate your growth.',
+      title: 'Affiliate Marketing Toolkit',
+      description: 'Ready-to-use templates, scripts, and tools to start earning immediately.',
       value: '₹6,000'
     },
     {
       icon: CheckCircle,
-      title: 'Canva Templates',
-      description: 'Premium Instagram and YouTube templates to create professional content.',
+      title: 'Premium Canva Templates',
+      description: 'Professional social media templates to create content that converts.',
       value: '₹4,000'
     },
     {
       icon: MessageCircle,
-      title: 'Strategy Call',
-      description: 'Personal 30-minute call with one of our expert mentors.',
+      title: 'Strategy Session',
+      description: 'Personal 30-minute call with one of our digital marketing experts.',
       value: '₹2,500'
     },
     {
       icon: Users,
-      title: 'Private Community',
-      description: 'Lifetime access to our exclusive community of earners.',
+      title: 'Community Access',
+      description: 'Join our exclusive network of 2.5 Lakh+ successful students.',
       value: '₹3,500'
     }
   ];
@@ -43,7 +43,7 @@ const BonusesSection = () => {
           <span className="relative bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">EXCLUSIVE</span>
         </div>
         <h2 className="section-title">Free Bonuses Worth ₹15,000</h2>
-        <p className="section-subtitle">Limited time bonuses included with your enrollment</p>
+        <p className="section-subtitle">Included when you enroll during the early bird offer</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
           {bonuses.map((bonus, index) => (

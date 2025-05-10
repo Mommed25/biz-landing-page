@@ -12,7 +12,7 @@ const PricingSection = () => {
     "Freelancing opportunities with upskilling courses",
     "Weekly live Q&A sessions",
     "Private community access with 2.5 Lakh+ students",
-    "Real success stories of students earning thousands monthly",
+    "Real success stories of students earning thousands to lakhs monthly",
     "Lifetime access with one-time payment",
     "All bonuses included worth ₹15,000"
   ];
