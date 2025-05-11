@@ -30,7 +30,7 @@ const WhyChooseUsSection = ({ id }: WhyChooseUsSectionProps) => {
   ];
 
   return (
-    <section id={id} className="py-20 bg-white">
+    <section id="features" className="py-20 bg-white">
       <div className="container-custom">
         <h2 className="section-title">Why Choose Us</h2>
         <p className="section-subtitle">We focus on practical skills that generate real income through digital marketing</p>

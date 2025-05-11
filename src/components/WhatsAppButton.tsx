@@ -55,13 +55,13 @@ const WhatsAppButton = () => {
           </div>
         )}
         <div 
-          className={`bg-primary text-white p-2 md:p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isPulsing ? 'scale-110' : ''}`}
+          className={`${isPulsing ? 'scale-110' : ''} transition-all duration-300`}
           style={{ width: '60px', height: '60px' }}
         >
           <img 
-            src="/lovable-uploads/d97cfa97-1b11-4b0d-8402-63be541dfd75.png" 
+            src="/lovable-uploads/21a05e39-3804-4ed5-8a2c-ec45df9a7f4d.png" 
             alt="WhatsApp" 
-            className="w-10 h-10"
+            className="w-full h-full"
           />
         </div>
       </div>

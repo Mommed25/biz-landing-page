@@ -39,8 +39,8 @@ const WhoIsThisForSection = () => {
               <div className="bg-primary/10 p-4 rounded-full inline-block mb-4">
                 <item.icon className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-center">{item.title}</h3>
+              <p className="text-gray-600 text-center">{item.description}</p>
             </div>
           ))}
         </div>

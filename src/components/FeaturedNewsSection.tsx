@@ -16,12 +16,12 @@ const FeaturedNewsSection = () => {
         
         <div className="flex flex-row justify-center items-center gap-4 md:gap-12 lg:gap-16">
           {newsPortals.map((portal, index) => (
-            <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300 w-1/4 md:w-auto flex items-center justify-center">
+            <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center">
               <img 
                 src={portal.logo} 
                 alt={`${portal.name} Logo`}
-                className="h-auto w-full max-h-10 md:max-h-12 object-contain"
-                style={portal.name === 'Times of India' ? { maxWidth: '80px' } : {}}
+                className="h-auto max-h-10 md:max-h-12 object-contain"
+                style={{ maxWidth: '80px' }}
               />
             </div>
           ))}

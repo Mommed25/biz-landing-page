@@ -89,8 +89,11 @@ const PopupForm = () => {
         <div className="p-5">
           {step === 1 && (
             <>
-              <p className="mb-6 text-gray-600">
+              <p className="mb-3 text-gray-600">
                 Do you wish to earn passive income while learning Digital Marketing skills?
+              </p>
+              <p className="mb-6 text-gray-600 font-medium">
+                If Yes, Please fill in the form given below
               </p>
               
               <form onSubmit={handleSubmitForm} className="space-y-4">

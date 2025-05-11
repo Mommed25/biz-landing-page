@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="mb-4">
-              <img src="/lovable-uploads/a539ee43-20fc-40a3-b65f-a18853669d21.png" alt="Bizgurukul Logo" className="h-12" />
+              <img src="/lovable-uploads/5ee42d13-ca14-4d42-adb6-82931740f75f.png" alt="Bizgurukul Logo" className="h-12" />
             </div>
             <p className="mb-6">
               Empowering Indians worldwide to achieve financial freedom through practical online income skills.
@@ -25,7 +25,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a href="https://wa.me/919656517580?text=I'm%20interested%20in%20the%20Digital%20Marketing%20course%20with%20affiliate%20program.%20Please%20reserve%20my%20early%20bird%20slot!" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors">
-                <img src="/lovable-uploads/d97cfa97-1b11-4b0d-8402-63be541dfd75.png" alt="WhatsApp" className="h-5 w-5 brightness-0 invert" />
+                <img src="/lovable-uploads/21a05e39-3804-4ed5-8a2c-ec45df9a7f4d.png" alt="WhatsApp" className="h-5 w-5 brightness-0 invert" />
               </a>
             </div>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
             <p className="mb-4">Have questions? Our team is here to help!</p>
             <a href="tel:+919656517580" className="text-white hover:underline block flex items-center">
-              <img src="/lovable-uploads/d97cfa97-1b11-4b0d-8402-63be541dfd75.png" alt="WhatsApp" className="h-5 w-5 mr-2 brightness-0 invert" />
+              <img src="/lovable-uploads/21a05e39-3804-4ed5-8a2c-ec45df9a7f4d.png" alt="WhatsApp" className="h-5 w-5 mr-2 brightness-0 invert" />
               +91 96565 17580
             </a>
           </div>
