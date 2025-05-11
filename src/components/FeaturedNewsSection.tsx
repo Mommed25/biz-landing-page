@@ -10,17 +10,18 @@ const FeaturedNewsSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-secondary">
       <div className="container-custom">
         <h2 className="text-2xl font-bold text-center mb-8">Featured In</h2>
         
         <div className="flex flex-row justify-center items-center gap-4 md:gap-12 lg:gap-16">
           {newsPortals.map((portal, index) => (
-            <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300 w-1/4 md:w-auto">
+            <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300 w-1/4 md:w-auto flex items-center justify-center">
               <img 
                 src={portal.logo} 
                 alt={`${portal.name} Logo`}
-                className="h-auto w-full max-h-10 md:max-h-16 object-contain"
+                className="h-auto w-full max-h-10 md:max-h-12 object-contain"
+                style={portal.name === 'Times of India' ? { maxWidth: '80px' } : {}}
               />
             </div>
           ))}

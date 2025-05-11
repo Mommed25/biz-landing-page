@@ -52,13 +52,17 @@ const WhatsAppButton = () => {
         {(isHovered || isPulsing) && (
           <div className="mr-3 bg-red-50 text-gray-800 py-2 px-4 rounded-l-full shadow-lg animate-fade-in border border-red-200">
             <span className="font-medium text-red-600">⚠️ Only 4 slots left at 30% off!</span>
-            <p className="text-xs">Send payment screenshot to get access!</p>
           </div>
         )}
         <div 
-          className={`bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isPulsing ? 'scale-110' : ''}`}
+          className={`bg-primary text-white p-2 md:p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isPulsing ? 'scale-110' : ''}`}
+          style={{ width: '60px', height: '60px' }}
         >
-          <img src="/lovable-uploads/d97cfa97-1b11-4b0d-8402-63be541dfd75.png" alt="WhatsApp" className="h-6 w-6" />
+          <img 
+            src="/lovable-uploads/d97cfa97-1b11-4b0d-8402-63be541dfd75.png" 
+            alt="WhatsApp" 
+            className="w-10 h-10"
+          />
         </div>
       </div>
     </a>

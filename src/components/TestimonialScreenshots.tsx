@@ -27,7 +27,7 @@ const TestimonialScreenshots = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container-custom">
-        <h2 className="section-title">Students Earning Proofs</h2>
+        <h2 className="section-title">Students Earning Proofs From Our Affiliate Programme</h2>
         <p className="section-subtitle">Real results from our students</p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12">
@@ -35,13 +35,10 @@ const TestimonialScreenshots = () => {
             <div key={index} className="bg-white p-5 md:p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
               <div className="mb-5 md:mb-6 h-48 md:h-56">
                 <img 
-                  src={testimonial.image.replace('public/', '')} 
+                  src={testimonial.image} 
                   alt={`${testimonial.name}'s Success Screenshot`}
                   className="w-full h-full rounded-lg object-cover shadow-md"
-                  onError={(e) => {
-                    console.error(`Image failed to load: ${testimonial.image}`);
-                    e.currentTarget.src = '/placeholder.svg';
-                  }}
+                  loading="lazy"
                 />
               </div>
               <div className="flex items-center mb-4">

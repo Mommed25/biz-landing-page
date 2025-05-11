@@ -25,20 +25,20 @@ export default {
 			},
 			colors: {
 				primary: {
-					DEFAULT: '#e53935',
-					light: '#ff6f60',
-					dark: '#ab000d',
+					DEFAULT: '#FF792E',
+					light: '#ffac73',
+					dark: '#d35a00',
 					foreground: '#ffffff'
+				},
+				secondary: {
+					DEFAULT: '#FFF2E9',
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -31,8 +31,9 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(2); // Start with Fathima Shahana
+  const [currentIndex, setCurrentIndex] = useState(0); // Start with Ramees Ali
   const [autoSlide, setAutoSlide] = useState(true);
+  const [preloadedImages, setPreloadedImages] = useState<boolean[]>([]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -41,6 +42,34 @@ const TestimonialsSection = () => {
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
+
+  // Preload all images when component mounts
+  useEffect(() => {
+    const loadImages = async () => {
+      const promises = testimonials.map((testimonial, index) => {
+        return new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = testimonial.avatar;
+          img.onload = () => {
+            setPreloadedImages(prev => {
+              const newState = [...prev];
+              newState[index] = true;
+              return newState;
+            });
+            resolve();
+          };
+          img.onerror = () => {
+            console.error(`Failed to load image: ${testimonial.avatar}`);
+            resolve();
+          };
+        });
+      });
+
+      await Promise.all(promises);
+    };
+
+    loadImages();
+  }, []);
 
   // Auto slide functionality
   useEffect(() => {
@@ -72,11 +101,14 @@ const TestimonialsSection = () => {
           {/* Testimonial Card */}
           <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100">
             <div className="flex flex-col md:flex-row items-center mb-6">
-              <img 
-                src={testimonials[currentIndex].avatar} 
-                alt={testimonials[currentIndex].name}
-                className="w-20 h-20 rounded-full object-cover border-4 border-primary/20 mb-4 md:mb-0 md:mr-6"
-              />
+              {/* Prevent testimonial image from changing separately */}
+              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary/20 mb-4 md:mb-0 md:mr-6">
+                <img 
+                  src={testimonials[currentIndex].avatar} 
+                  alt={testimonials[currentIndex].name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div>
                 <h4 className="text-xl font-bold">{testimonials[currentIndex].name}</h4>
                 <p className="text-gray-600">{testimonials[currentIndex].location}</p>

@@ -34,7 +34,7 @@ const WhoIsThisForSection = () => {
           {items.map((item, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 text-center"
             >
               <div className="bg-primary/10 p-4 rounded-full inline-block mb-4">
                 <item.icon className="h-8 w-8 text-primary" />

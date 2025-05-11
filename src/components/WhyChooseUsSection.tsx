@@ -1,7 +1,11 @@
 
 import { Award, Clock, Users, HandHeart } from 'lucide-react';
 
-const WhyChooseUsSection = () => {
+interface WhyChooseUsSectionProps {
+  id?: string;
+}
+
+const WhyChooseUsSection = ({ id }: WhyChooseUsSectionProps) => {
   const benefits = [
     {
       icon: Award,
@@ -26,7 +30,7 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id={id} className="py-20 bg-white">
       <div className="container-custom">
         <h2 className="section-title">Why Choose Us</h2>
         <p className="section-subtitle">We focus on practical skills that generate real income through digital marketing</p>

@@ -32,7 +32,7 @@ const Index = () => {
       <FeaturedNewsSection />
       <StatsSection />
       <WhatYouLearnSection />
-      <WhyChooseUsSection />
+      <WhyChooseUsSection id="features" />
       <WhoIsThisForSection />
       
       <div className="container-custom py-8">
@@ -40,7 +40,7 @@ const Index = () => {
       </div>
       
       <TestimonialsSection />
-      <VideoTestimonialsSection />
+      <VideoTestimonialsSection id="testimonials" />
       <TestimonialScreenshots />
       <StudentsWorkSection />
       
@@ -60,7 +60,7 @@ const Index = () => {
       <FaqSection />
       
       {/* Final CTA below FAQ section */}
-      <div className="container-custom py-10 mb-8">
+      <div id="pricing" className="container-custom py-10 mb-8">
         <LimitedTimeCta />
       </div>
       

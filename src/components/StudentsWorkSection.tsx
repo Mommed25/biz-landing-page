@@ -22,17 +22,19 @@ const StudentsWorkSection = () => {
     
     let animationId: number;
     let scrollPosition = 0;
+    const scrollSpeed = 0.5;
     const totalWidth = scrollContainer.scrollWidth / 2;
     
     const animate = () => {
       if (scrollContainer) {
-        scrollPosition += 0.5;
+        scrollPosition += scrollSpeed;
         
         if (scrollPosition >= totalWidth) {
           scrollPosition = 0;
+          scrollContainer.scrollLeft = 0;
+        } else {
+          scrollContainer.scrollLeft = scrollPosition;
         }
-        
-        scrollContainer.scrollLeft = scrollPosition;
       }
       
       animationId = requestAnimationFrame(animate);
@@ -54,7 +56,7 @@ const StudentsWorkSection = () => {
         <div className="relative overflow-hidden mt-10">
           <div 
             ref={scrollContainerRef}
-            className="flex space-x-12 overflow-x-auto scrollbar-hide"
+            className="flex space-x-12 overflow-x-hidden"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {/* First set of logos */}
@@ -63,8 +65,8 @@ const StudentsWorkSection = () => {
                 <img 
                   src={company.logo} 
                   alt={`${company.name} Logo`}
-                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                  style={{ maxWidth: '100px' }}
+                  className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  style={{ width: '100px', objectFit: 'contain' }}
                 />
               </div>
             ))}
@@ -75,8 +77,8 @@ const StudentsWorkSection = () => {
                 <img 
                   src={company.logo} 
                   alt={`${company.name} Logo`}
-                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                  style={{ maxWidth: '100px' }}
+                  className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  style={{ width: '100px', objectFit: 'contain' }}
                 />
               </div>
             ))}

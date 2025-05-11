@@ -191,9 +191,9 @@ const PopupForm = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold mb-2">Registration Successful!</h4>
+              <h4 className="text-xl font-semibold mb-2">Mobile Number Verified</h4>
               <p className="text-gray-600">
-                Our team will contact you shortly with information on how to start earning through digital marketing.
+                You can now access the website and get yourself enrolled to our course to attain financial freedom.
               </p>
             </div>
           )}
