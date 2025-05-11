@@ -11,7 +11,7 @@ const PricingSection = () => {
     "Complete affiliate marketing training program",
     "Freelancing opportunities with upskilling courses",
     "Weekly live Q&A sessions",
-    "Private community access with 2.5 Lakh+ students",
+    "Private community access with 3 Lakh+ students",
     "Real success stories of students earning thousands to lakhs monthly",
     "Lifetime access with one-time payment",
     "All bonuses included worth ₹15,000"
@@ -25,7 +25,7 @@ const PricingSection = () => {
           <span className="relative bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">EARLY BIRD OFFER</span>
         </div>
         <h2 className="section-title">Limited Time Offer - Only 4 Slots Left!</h2>
-        <p className="section-subtitle">Join 2.5 Lakh+ students already on their path to financial freedom</p>
+        <p className="section-subtitle">Join 3 Lakh+ students already on their path to financial freedom</p>
         
         <div className="max-w-4xl mx-auto mt-10">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
@@ -44,6 +44,12 @@ const PricingSection = () => {
             </div>
             
             <div className="p-8">
+              <div className="p-4 bg-yellow-50 rounded-lg mb-6 border border-yellow-200">
+                <p className="text-center text-amber-800 font-medium">
+                  📱 Send your payment screenshot to our WhatsApp number to get exclusive community access!
+                </p>
+              </div>
+              
               <ul className="space-y-4 mb-8">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-center">
@@ -72,7 +78,7 @@ const PricingSection = () => {
                   <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" className="h-6" />
                   <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" className="h-6" />
                   <img src="https://img.icons8.com/color/48/000000/rupay.png" alt="RuPay" className="h-6" />
-                  <img src="https://img.icons8.com/color/48/000000/upi.png" alt="UPI" className="h-6" />
+                  <img src="https://img.icons8.com/ios-filled/50/000000/bhim-upi.png" alt="UPI" className="h-6" />
                 </div>
               </div>
             </div>

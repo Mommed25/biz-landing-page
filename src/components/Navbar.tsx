@@ -10,9 +10,9 @@ const Navbar = () => {
     <header className="py-4 px-6 md:px-10 bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-xl md:text-2xl font-bold text-primary">
-            Bizgurukul
-          </h1>
+          <a href="/" className="block">
+            <img src="/lovable-uploads/64753bd4-2845-472a-94a1-919c350fa2b3.png" alt="Bizgurukul Logo" className="h-8 md:h-10" />
+          </a>
         </div>
         
         {/* Desktop Menu */}

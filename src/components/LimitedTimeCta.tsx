@@ -13,6 +13,7 @@ const LimitedTimeCta = ({
 }) => {
   const [isPulsing, setIsPulsing] = useState(false);
   const [remainingSlots, setRemainingSlots] = useState(4);
+  const [isBlinking, setIsBlinking] = useState(false);
 
   // Create a pulsing effect every few seconds
   useEffect(() => {
@@ -25,9 +26,19 @@ const LimitedTimeCta = ({
     return () => clearInterval(interval);
   }, []);
 
+  // Blink effect for slots
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsBlinking(true);
+      setTimeout(() => setIsBlinking(false), 800);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className={cn(
-      "bg-gradient-to-r from-orange-50 via-red-50 to-orange-50 rounded-2xl border border-red-100 shadow-lg p-6 md:p-8",
+      "bg-gradient-to-r from-orange-50 via-red-50 to-orange-50 rounded-2xl border border-red-200 shadow-lg p-6 md:p-8",
       variant === "compact" ? "max-w-3xl mx-auto" : "w-full",
       className
     )}>
@@ -37,9 +48,15 @@ const LimitedTimeCta = ({
       )}>
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <Timer className="h-5 w-5 text-primary animate-pulse" />
-            <span className="bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
-              Only {remainingSlots} slots remaining at 30% off!
+            <Timer className={cn(
+              "h-5 w-5 text-red-500",
+              isBlinking ? "animate-pulse" : ""
+            )} />
+            <span className={cn(
+              "bg-red-100 text-red-600 text-sm font-semibold px-3 py-1 rounded-full",
+              isBlinking ? "bg-red-200" : ""
+            )}>
+              ⚠️ Only {remainingSlots} slots remaining at 30% off! ⚠️
             </span>
           </div>
           
@@ -57,7 +74,7 @@ const LimitedTimeCta = ({
           
           {variant === "full" && (
             <p className="text-gray-600 mb-4 max-w-lg">
-              Get lifetime access to our digital marketing course with complete affiliate marketing training. Join 2.5 Lakh+ students already earning thousands every month!
+              Get lifetime access to our digital marketing course with complete affiliate marketing training. Join 3 Lakh+ students already earning thousands every month!
             </p>
           )}
         </div>
@@ -81,7 +98,7 @@ const LimitedTimeCta = ({
           </Button>
           
           <p className="text-xs text-center md:text-left text-gray-500 mt-2">
-            Lifetime access • One-time payment
+            Lifetime access • One-time payment • <span className="font-semibold text-red-500">Send payment screenshot to WhatsApp</span>
           </p>
         </div>
       </div>

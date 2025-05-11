@@ -3,14 +3,15 @@ import React, { useEffect, useRef } from 'react';
 
 const StudentsWorkSection = () => {
   const logos = [
-    { name: 'Zomato', logo: '/logos/zomato.png' },
-    { name: 'Vivo', logo: '/logos/vivo.png' },
-    { name: 'Wipro', logo: '/logos/wipro.png' },
-    { name: 'Deloitte', logo: '/logos/deloitte.png' },
-    { name: 'TCS', logo: '/logos/tcs.png' },
-    { name: 'Accenture', logo: '/logos/accenture.png' },
-    { name: 'Flydocs', logo: '/logos/flydocs.png' },
-    { name: 'Genpact', logo: '/logos/genpact.png' },
+    { name: 'Zomato', logo: '/lovable-uploads/f2e8e01a-a12b-4d97-b455-7ac7041fbe89.png' },
+    { name: 'Vivo', logo: '/lovable-uploads/019608e1-4412-4996-8fd5-58eeba592fd6.png' },
+    { name: 'Wipro', logo: '/lovable-uploads/c8d1690f-c379-4673-914f-38afb60bcaa0.png' },
+    { name: 'Deloitte', logo: '/lovable-uploads/0bc94515-248f-4a2f-ac02-cd69a3b9fcd2.png' },
+    { name: 'TCS', logo: '/lovable-uploads/e492e7dc-cc48-45c9-87e7-00cd62ec90c8.png' },
+    { name: 'Accenture', logo: '/lovable-uploads/76b10ef5-abcd-4225-8883-64f518600641.png' },
+    { name: 'Flydocs', logo: '/lovable-uploads/2c425840-fb46-4990-81b3-093dba0da7f5.png' },
+    { name: 'Genpact', logo: '/lovable-uploads/5d405c40-4d1c-4e5a-b256-85d21334f833.png' },
+    { name: 'Sonata', logo: '/lovable-uploads/9c34074d-9705-437b-9a51-b587195f9314.png' },
   ];
   
   const scrollRef = useRef<HTMLDivElement>(null);

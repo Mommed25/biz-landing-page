@@ -1,14 +1,15 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Book, Clock, Users, Award, TrendingUp } from 'lucide-react';
+import { Book, Clock, Users, Award, IndianRupee, History } from 'lucide-react';
 
 const StatsSection = () => {
   const statsItems = [
-    { icon: Book, value: 24, suffix: '', label: 'Courses' },
+    { icon: Book, value: 24, suffix: '+', label: 'Courses' },
     { icon: Clock, value: 171, suffix: '+', label: 'Hours' },
     { icon: Users, value: 300000, suffix: '+', label: 'Students' },
     { icon: Award, value: 200, suffix: '+', label: 'Trainers' },
-    { icon: TrendingUp, value: 80, suffix: ' Cr+', label: 'Community Earnings' },
+    { icon: IndianRupee, value: 80, suffix: ' Cr+', label: 'Community Earnings' },
+    { icon: History, value: 8, suffix: '+ Years', label: 'Expertised Mentors' },
   ];
 
   const [counters, setCounters] = useState(statsItems.map(() => 0));
@@ -90,13 +91,13 @@ const StatsSection = () => {
         <h2 className="section-title">Our Impact in Numbers</h2>
         <p className="section-subtitle">Growing stronger every day with our community</p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 mt-12">
           {statsItems.map((item, index) => (
             <div key={index} className="text-center">
-              <div className="bg-primary/10 p-4 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <item.icon className="w-10 h-10 text-primary" />
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4">
+                <item.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
                 {formatNumber(counters[index])}{item.suffix}
               </div>
               <div className="text-gray-600">{item.label}</div>

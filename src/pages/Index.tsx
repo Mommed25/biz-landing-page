@@ -17,6 +17,7 @@ import StudentsWorkSection from '@/components/StudentsWorkSection';
 import StatsSection from '@/components/StatsSection';
 import TestimonialScreenshots from '@/components/TestimonialScreenshots';
 import VideoTestimonialsSection from '@/components/VideoTestimonialsSection';
+import PopupForm from '@/components/PopupForm';
 
 const Index = () => {
   return (
@@ -59,6 +60,7 @@ const Index = () => {
       <FaqSection />
       <Footer />
       <WhatsAppButton />
+      <PopupForm />
     </div>
   );
 };

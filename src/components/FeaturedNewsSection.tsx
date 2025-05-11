@@ -3,10 +3,10 @@ import React from 'react';
 
 const FeaturedNewsSection = () => {
   const newsPortals = [
-    { name: 'Dailyhunt', logo: '/logos/dailyhunt.png' },
-    { name: 'Zee Business', logo: '/logos/zee-business.png' },
-    { name: 'Entrepreneur India', logo: '/logos/entrepreneur-india.png' },
-    { name: 'Times of India', logo: '/logos/times-of-india.png' },
+    { name: 'Dailyhunt', logo: '/lovable-uploads/dc87d564-7005-432f-bfcd-d2a6c0b058d9.png' },
+    { name: 'Zee Business', logo: '/lovable-uploads/cd2df0c0-7999-40d7-9bdd-b23fb2fd8aec.png' },
+    { name: 'Entrepreneur India', logo: '/lovable-uploads/e03ea347-feb9-466f-9a55-8a652a3b3f9b.png' },
+    { name: 'Times of India', logo: '/lovable-uploads/116ff6a6-78fa-4609-9848-5c3edcd3c845.png' },
   ];
 
   return (

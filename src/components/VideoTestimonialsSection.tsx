@@ -45,7 +45,7 @@ const VideoTestimonialsSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container-custom">
-        <h2 className="section-title">Video Success Stories</h2>
+        <h2 className="section-title">Hear how Bizgurukul changed their life 360°</h2>
         <p className="section-subtitle">See how Bizgurukul transformed these lives</p>
         
         <div className="max-w-4xl mx-auto mt-12">
@@ -88,7 +88,7 @@ const VideoTestimonialsSection = () => {
             </div>
           </div>
           
-          <div className="mt-8 grid grid-cols-5 gap-3">
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3">
             {videos.map((video, index) => (
               <button
                 key={index}

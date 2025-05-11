@@ -27,13 +27,13 @@ const TestimonialScreenshots = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container-custom">
-        <h2 className="section-title">Success Proofs</h2>
+        <h2 className="section-title">Students Earning Proofs</h2>
         <p className="section-subtitle">Real results from our students</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="mb-6">
+            <div key={index} className="bg-white p-5 md:p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="mb-5 md:mb-6">
                 <img 
                   src={testimonial.image} 
                   alt={`${testimonial.name}'s Success Screenshot`}

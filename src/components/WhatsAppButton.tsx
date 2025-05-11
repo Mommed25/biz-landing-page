@@ -1,5 +1,5 @@
 
-import { Phone } from 'lucide-react';
+import { WhatsApp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const WhatsAppButton = () => {
@@ -51,15 +51,15 @@ const WhatsAppButton = () => {
     >
       <div className="flex items-center">
         {(isHovered || isPulsing) && (
-          <div className="mr-3 bg-white text-gray-800 py-2 px-4 rounded-l-full shadow-lg animate-fade-in">
-            <span className="font-medium">Only 4 slots left at 30% off!</span>
-            <p className="text-xs">Get lifetime access now</p>
+          <div className="mr-3 bg-red-50 text-gray-800 py-2 px-4 rounded-l-full shadow-lg animate-fade-in border border-red-200">
+            <span className="font-medium text-red-600">⚠️ Only 4 slots left at 30% off!</span>
+            <p className="text-xs">Send payment screenshot to get access!</p>
           </div>
         )}
         <div 
           className={`bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isPulsing ? 'scale-110' : ''}`}
         >
-          <Phone className="h-6 w-6" />
+          <WhatsApp className="h-6 w-6" />
         </div>
       </div>
     </a>
