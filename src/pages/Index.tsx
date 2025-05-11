@@ -12,6 +12,11 @@ import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import LimitedTimeCta from '@/components/LimitedTimeCta';
+import FeaturedNewsSection from '@/components/FeaturedNewsSection';
+import StudentsWorkSection from '@/components/StudentsWorkSection';
+import StatsSection from '@/components/StatsSection';
+import TestimonialScreenshots from '@/components/TestimonialScreenshots';
+import VideoTestimonialsSection from '@/components/VideoTestimonialsSection';
 
 const Index = () => {
   return (
@@ -23,13 +28,20 @@ const Index = () => {
         <LimitedTimeCta />
       </div>
       
+      <FeaturedNewsSection />
+      <StatsSection />
+      <WhatYouLearnSection />
+      <WhyChooseUsSection />
       <WhoIsThisForSection />
       
       <div className="container-custom py-8 md:py-10">
         <LimitedTimeCta variant="compact" />
       </div>
       
-      <WhatYouLearnSection />
+      <TestimonialsSection />
+      <VideoTestimonialsSection />
+      <TestimonialScreenshots />
+      <StudentsWorkSection />
       
       <div className="bg-gray-50 py-8 md:py-10">
         <div className="container-custom">
@@ -37,15 +49,13 @@ const Index = () => {
         </div>
       </div>
       
-      <WhyChooseUsSection />
-      <TestimonialsSection />
+      <BonusesSection />
+      <PricingSection />
       
       <div className="container-custom py-8 md:py-10">
         <LimitedTimeCta />
       </div>
       
-      <BonusesSection />
-      <PricingSection />
       <FaqSection />
       <Footer />
       <WhatsAppButton />

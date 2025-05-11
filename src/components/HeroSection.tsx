@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
@@ -9,9 +10,18 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
             Master <span className="text-primary">Digital Marketing</span> & Earn Passive Income
           </h1>
-          <p className="text-xl text-gray-600">
-            Join 2.5 Lakh+ students across India who are earning thousands and lakhs monthly through our affiliate marketing program and freelancing opportunities.
+          <p className="text-xl text-gray-600 mb-8">
+            Learn practical skills to generate consistent income through digital marketing and affiliate programs
           </p>
+          <Button 
+            size="lg" 
+            className="text-base px-8 py-6 h-auto rounded-full shadow-md"
+            asChild
+          >
+            <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+              Get Started Now
+            </a>
+          </Button>
         </div>
       </div>
     </section>

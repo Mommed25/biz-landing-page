@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-xl md:text-2xl font-bold text-primary">
-            IncomeMasters
+            Bizgurukul
           </h1>
         </div>
         
@@ -22,8 +22,10 @@ const Navbar = () => {
           <a href="#testimonials" className="text-gray-700 hover:text-primary transition-colors">Testimonials</a>
           <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors">Pricing</a>
           <a href="#faq" className="text-gray-700 hover:text-primary transition-colors">FAQ</a>
-          <Button className="bg-primary hover:bg-primary-dark text-white rounded-full">
-            Join Now
+          <Button className="bg-primary hover:bg-primary-dark text-white rounded-full" asChild>
+            <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+              Join Now
+            </a>
           </Button>
         </nav>
         
@@ -45,8 +47,10 @@ const Navbar = () => {
             <a href="#testimonials" className="text-gray-700 hover:text-primary transition-colors py-2">Testimonials</a>
             <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors py-2">Pricing</a>
             <a href="#faq" className="text-gray-700 hover:text-primary transition-colors py-2">FAQ</a>
-            <Button className="bg-primary hover:bg-primary-dark text-white w-full rounded-full">
-              Join Now
+            <Button className="bg-primary hover:bg-primary-dark text-white w-full rounded-full" asChild>
+              <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+                Join Now
+              </a>
             </Button>
           </div>
         </nav>

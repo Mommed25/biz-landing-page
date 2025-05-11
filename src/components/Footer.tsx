@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">IncomeMasters</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Bizgurukul</h3>
             <p className="mb-6">
-              Empowering Malayalis worldwide to achieve financial freedom through practical online income skills.
+              Empowering Indians worldwide to achieve financial freedom through practical online income skills.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors">
@@ -59,17 +59,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
             <p className="mb-4">Have questions? Our team is here to help!</p>
-            <a href="mailto:support@incomemasters.in" className="text-primary hover:underline block mb-3">
-              support@incomemasters.in
-            </a>
-            <a href="tel:+919876543210" className="text-primary hover:underline block">
-              +91 98765 43210
+            <a href="tel:+919656517580" className="text-primary hover:underline block">
+              +91 96565 17580
             </a>
           </div>
         </div>
         
         <div className="border-t border-gray-800 pt-8 mt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} IncomeMasters. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Bizgurukul. All rights reserved.</p>
         </div>
       </div>
     </footer>

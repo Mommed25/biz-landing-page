@@ -57,13 +57,17 @@ const PricingSection = () => {
                 className={`btn-primary w-full py-6 text-lg transition-all duration-300 ${isHovered ? 'scale-[1.02] shadow-lg' : ''} flex items-center justify-center gap-2`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                asChild
               >
-                <span>Secure Your Slot Now</span>
-                <Zap className={`h-5 w-5 transition-all ${isHovered ? 'scale-125' : ''}`} />
+                <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+                  <span>Secure Your Slot Now</span>
+                  <Zap className={`h-5 w-5 transition-all ${isHovered ? 'scale-125' : ''}`} />
+                </a>
               </Button>
               
               <div className="mt-6 text-center text-sm text-gray-500">
-                <p>Secure payment via Razorpay</p>
+                <p>Send your payment screenshot to our WhatsApp number</p>
+                <p className="mt-2 text-xs">for access to our exclusive community group</p>
                 <div className="flex justify-center mt-4 space-x-3">
                   <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" className="h-6" />
                   <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" className="h-6" />

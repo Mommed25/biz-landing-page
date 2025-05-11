@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -5,27 +6,27 @@ import { Button } from '@/components/ui/button';
 const testimonials = [
   {
     quote: "I started earning ₹15,000/month as a student! This digital marketing course gave me financial independence while still in college.",
-    name: "Arjun",
-    location: "Calicut",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg" // Indian male face
+    name: "Arjun Menon",
+    location: "Kochi",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg"
   },
   {
     quote: "As a homemaker, I now make ₹25,000 monthly working just 2 hours daily with the affiliate marketing skills I learned here.",
-    name: "Priya",
-    location: "Kochi",
-    avatar: "https://randomuser.me/api/portraits/women/79.jpg" // Indian female face
+    name: "Priya Nair",
+    location: "Trivandrum",
+    avatar: "https://randomuser.me/api/portraits/women/79.jpg"
   },
   {
     quote: "After 5 years in IT, I was burnt out. This program helped me build a side hustle that now earns more than my corporate job!",
-    name: "Rahul",
-    location: "Trivandrum",
-    avatar: "https://randomuser.me/api/portraits/men/42.jpg" // Indian male face
+    name: "Rahul Sharma",
+    location: "Kozhikode",
+    avatar: "https://randomuser.me/api/portraits/men/42.jpg"
   },
   {
     quote: "The affiliate marketing module alone helped me generate ₹40,000 in my first month. Now I'm earning over a lakh monthly!",
-    name: "Lakshmi",
+    name: "Meera Krishnan",
     location: "Thrissur",
-    avatar: "https://randomuser.me/api/portraits/women/57.jpg" // Indian female face
+    avatar: "https://randomuser.me/api/portraits/women/57.jpg"
   }
 ];
 

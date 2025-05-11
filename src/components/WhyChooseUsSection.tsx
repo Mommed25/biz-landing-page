@@ -1,8 +1,13 @@
 
-import { Clock, Award, Users, HandHeart } from 'lucide-react';
+import { Award, Clock, Users, HandHeart } from 'lucide-react';
 
 const WhyChooseUsSection = () => {
   const benefits = [
+    {
+      icon: Award,
+      title: 'Government of India Registered & Approved',
+      description: 'Official recognition ensuring quality education and credibility'
+    },
     {
       icon: Clock,
       title: 'Lifetime Validity',
@@ -14,14 +19,9 @@ const WhyChooseUsSection = () => {
       description: 'Receive a professional certificate that adds value to your resume and credibility to your skills'
     },
     {
-      icon: Users,
-      title: 'Private Community Access',
-      description: 'Join our exclusive community of enrolled students for networking, support, and growth opportunities'
-    },
-    {
       icon: HandHeart,
-      title: 'Complete Income Training',
-      description: 'Learn how to earn thousands as passive income with our detailed, step-by-step affiliate marketing program'
+      title: 'Learn & Earn Opportunity',
+      description: 'Opportunity to earn passive income while you learn with complete training'
     }
   ];
 

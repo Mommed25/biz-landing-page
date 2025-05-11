@@ -3,7 +3,8 @@ import {
   MessageCircle, 
   PenTool, 
   Users,
-  CheckCircle 
+  CheckCircle,
+  HeartHandshake 
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -11,27 +12,33 @@ const BonusesSection = () => {
   const bonuses = [
     {
       icon: PenTool,
-      title: 'Affiliate Marketing Toolkit',
-      description: 'Ready-to-use templates, scripts, and tools to start earning immediately.',
+      title: 'Orientation to Earn Passive Income',
+      description: 'Step-by-step guidance to start earning with minimal investment.',
       value: '₹6,000'
     },
     {
+      icon: Users,
+      title: 'Access to Private Community',
+      description: 'Join our exclusive network of successful students.',
+      value: '₹3,500'
+    },
+    {
       icon: CheckCircle,
-      title: 'Premium Canva Templates',
-      description: 'Professional social media templates to create content that converts.',
+      title: 'Marketing Materials',
+      description: 'Ready-to-use templates and promotional content.',
       value: '₹4,000'
     },
     {
-      icon: MessageCircle,
-      title: 'Strategy Session',
-      description: 'Personal 30-minute call with one of our digital marketing experts.',
-      value: '₹2,500'
+      icon: HeartHandshake,
+      title: 'Steps to Success Training Sessions',
+      description: 'Learn proven strategies from top earners in the platform.',
+      value: '₹5,500'
     },
     {
-      icon: Users,
-      title: 'Community Access',
-      description: 'Join our exclusive network of 2.5 Lakh+ successful students.',
-      value: '₹3,500'
+      icon: MessageCircle,
+      title: 'Live Q&A Sessions',
+      description: 'Get your questions answered by industry experts.',
+      value: '₹2,500'
     }
   ];
 
@@ -45,7 +52,7 @@ const BonusesSection = () => {
         <h2 className="section-title">Free Bonuses Worth ₹15,000</h2>
         <p className="section-subtitle">Included when you enroll during the early bird offer</p>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {bonuses.map((bonus, index) => (
             <Card key={index} className="overflow-hidden border-gray-200 hover:shadow-lg transition-all duration-300">
               <div className="bg-primary/10 p-4 flex justify-center">

@@ -69,12 +69,15 @@ const LimitedTimeCta = ({
               "w-full md:w-auto text-base px-8 py-6 h-auto flex items-center gap-2 rounded-full shadow-md transition-all duration-300",
               isPulsing ? "scale-105 shadow-xl" : "",
             )}
+            asChild
           >
-            <span>Secure Your Slot Now</span>
-            <Zap className={cn(
-              "h-5 w-5 transition-all",
-              isPulsing ? "scale-125" : ""
-            )} />
+            <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+              <span>Secure Your Slot Now</span>
+              <Zap className={cn(
+                "h-5 w-5 transition-all",
+                isPulsing ? "scale-125" : ""
+              )} />
+            </a>
           </Button>
           
           <p className="text-xs text-center md:text-left text-gray-500 mt-2">
