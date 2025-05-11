@@ -25,7 +25,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       
-      <div className="container-custom py-8 md:py-12">
+      <div className="container-custom py-8">
         <LimitedTimeCta />
       </div>
       
@@ -35,7 +35,7 @@ const Index = () => {
       <WhyChooseUsSection />
       <WhoIsThisForSection />
       
-      <div className="container-custom py-8 md:py-10">
+      <div className="container-custom py-8">
         <LimitedTimeCta variant="compact" />
       </div>
       
@@ -44,20 +44,26 @@ const Index = () => {
       <TestimonialScreenshots />
       <StudentsWorkSection />
       
-      <div className="bg-gray-50 py-8 md:py-10">
+      <div className="bg-gray-50 py-8">
         <div className="container-custom">
           <LimitedTimeCta variant="compact" />
         </div>
       </div>
       
       <BonusesSection />
-      <PricingSection />
       
-      <div className="container-custom py-8 md:py-10">
-        <LimitedTimeCta />
+      {/* Extra CTA between Bonuses and FAQ */}
+      <div className="container-custom py-8">
+        <LimitedTimeCta variant="compact" />
       </div>
       
       <FaqSection />
+      
+      {/* Final CTA below FAQ section */}
+      <div className="container-custom py-10 mb-8">
+        <LimitedTimeCta />
+      </div>
+      
       <Footer />
       <WhatsAppButton />
       <PopupForm />

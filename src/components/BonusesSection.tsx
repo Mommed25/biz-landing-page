@@ -13,7 +13,7 @@ const BonusesSection = () => {
     {
       icon: PenTool,
       title: 'Orientation to Earn Passive Income',
-      description: 'Step-by-step guidance to start earning with minimal investment.',
+      description: 'Step-by-step guidance to start earning with zero investment.',
       value: '₹6,000'
     },
     {
@@ -43,7 +43,7 @@ const BonusesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
       <div className="container-custom">
         <div className="relative inline-block mb-2">
           <span className="absolute inset-0 bg-primary/20 rounded-full transform rotate-3"></span>

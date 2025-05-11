@@ -14,23 +14,35 @@ const StudentsWorkSection = () => {
     { name: 'Sonata', logo: '/lovable-uploads/9c34074d-9705-437b-9a51-b587195f9314.png' },
   ];
   
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
+    const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) return;
     
-    const animateScroll = () => {
-      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-        scrollContainer.scrollLeft = 0;
-      } else {
-        scrollContainer.scrollLeft += 1;
+    let animationId: number;
+    let scrollPosition = 0;
+    const totalWidth = scrollContainer.scrollWidth / 2;
+    
+    const animate = () => {
+      if (scrollContainer) {
+        scrollPosition += 0.5;
+        
+        if (scrollPosition >= totalWidth) {
+          scrollPosition = 0;
+        }
+        
+        scrollContainer.scrollLeft = scrollPosition;
       }
+      
+      animationId = requestAnimationFrame(animate);
     };
     
-    const animationId = setInterval(animateScroll, 30);
+    animationId = requestAnimationFrame(animate);
     
-    return () => clearInterval(animationId);
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
   }, []);
 
   return (
@@ -41,28 +53,30 @@ const StudentsWorkSection = () => {
         
         <div className="relative overflow-hidden mt-10">
           <div 
-            ref={scrollRef}
+            ref={scrollContainerRef}
             className="flex space-x-12 overflow-x-auto scrollbar-hide"
-            style={{ scrollBehavior: 'smooth' }}
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {/* First set of logos */}
             {logos.map((company, index) => (
-              <div key={`a-${index}`} className="flex-shrink-0">
+              <div key={`a-${index}`} className="flex-shrink-0 flex items-center">
                 <img 
                   src={company.logo} 
                   alt={`${company.name} Logo`}
-                  className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  style={{ maxWidth: '100px' }}
                 />
               </div>
             ))}
             
             {/* Duplicate for continuous scrolling */}
             {logos.map((company, index) => (
-              <div key={`b-${index}`} className="flex-shrink-0">
+              <div key={`b-${index}`} className="flex-shrink-0 flex items-center">
                 <img 
                   src={company.logo} 
                   alt={`${company.name} Logo`}
-                  className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  style={{ maxWidth: '100px' }}
                 />
               </div>
             ))}

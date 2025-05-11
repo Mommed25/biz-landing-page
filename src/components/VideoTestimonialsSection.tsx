@@ -43,7 +43,7 @@ const VideoTestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="container-custom">
         <h2 className="section-title">Hear how Bizgurukul changed their life 360°</h2>
         <p className="section-subtitle">See how Bizgurukul transformed these lives</p>

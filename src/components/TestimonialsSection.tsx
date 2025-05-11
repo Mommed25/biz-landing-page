@@ -8,30 +8,30 @@ const testimonials = [
     quote: "The affiliate marketing module alone helped me generate ₹40,000 in my first month. Now I'm earning over a lakh monthly!",
     name: "Ramees Ali",
     location: "Kochi",
-    avatar: "https://randomuser.me/api/portraits/men/76.jpg"
+    avatar: "/lovable-uploads/3d96c8af-ce71-4707-99e4-c06c4184afb2.png"
   },
   {
     quote: "I started earning ₹15,000/month as a student! This digital marketing course gave me financial independence while still in college.",
     name: "Arjun Menon",
     location: "Kochi",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg"
+    avatar: "/lovable-uploads/4b33b778-fc0f-4e85-95b9-2b7af0b182b5.png"
   },
   {
     quote: "As a homemaker, I now make ₹25,000 monthly working just 2 hours daily with the affiliate marketing skills I learned here.",
     name: "Fathima Shahana",
     location: "Trivandrum",
-    avatar: "https://randomuser.me/api/portraits/women/79.jpg"
+    avatar: "/lovable-uploads/ce9ce9a6-2643-4867-a28e-cdc1d0e13afa.png"
   },
   {
     quote: "After 5 years in IT, I was burnt out. This program helped me build a side hustle that now earns more than my corporate job!",
     name: "Priya Nair",
     location: "Kozhikode",
-    avatar: "https://randomuser.me/api/portraits/women/57.jpg"
+    avatar: "/lovable-uploads/fa529a1a-c0b9-43bd-8d15-7dbb4ea84c91.png"
   }
 ];
 
 const TestimonialsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(2); // Start with Fathima Shahana
   const [autoSlide, setAutoSlide] = useState(true);
 
   const nextTestimonial = () => {
@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-16 bg-gray-50">
       <div className="container-custom">
         <h2 className="section-title">What Our Students Say</h2>
         <p className="section-subtitle">Join thousands of students already earning through our program</p>
