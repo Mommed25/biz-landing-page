@@ -25,7 +25,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a href="https://wa.me/919656517580?text=I'm%20interested%20in%20the%20Digital%20Marketing%20course%20with%20affiliate%20program.%20Please%20reserve%20my%20early%20bird%20slot!" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition-colors">
-                <img src="/lovable-uploads/f2e8e01a-a12b-4d97-b455-7ac7041fbe89.png" alt="WhatsApp" className="h-5 w-5" />
+                <img src="/lovable-uploads/50569179-d2db-48a0-83db-d007881733da.png" alt="WhatsApp" className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
             <p className="mb-4">Have questions? Our team is here to help!</p>
             <a href="https://wa.me/919656517580?text=I'm%20interested%20in%20the%20Digital%20Marketing%20course%20with%20affiliate%20program.%20Please%20reserve%20my%20early%20bird%20slot!" className="text-white hover:underline block flex items-center">
-              <img src="/lovable-uploads/f2e8e01a-a12b-4d97-b455-7ac7041fbe89.png" alt="WhatsApp" className="h-6 w-6 mr-2" />
+              <img src="/lovable-uploads/50569179-d2db-48a0-83db-d007881733da.png" alt="WhatsApp" className="h-6 w-6 mr-2" />
               <span className="text-base">+91 96565 17580</span>
             </a>
           </div>

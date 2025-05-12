@@ -71,8 +71,8 @@ const PopupForm = () => {
   return (
     <div className="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-xl max-w-md w-full relative overflow-hidden">
-        {/* Header */}
-        <div className="bg-primary p-5 text-white">
+        {/* Header - Center aligned text */}
+        <div className="bg-primary p-5 text-white text-center">
           <h3 className="text-xl font-bold">
             {step === 3 ? 'Thank You!' : 'Start Your Journey To Financial Freedom'}
           </h3>
