@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from '@/components/ui/sonner';
+import { Bell } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Data for generating realistic notifications
 const southIndianNames = [
@@ -21,11 +23,15 @@ const locations = [
 ];
 
 const timeframes = [
-  '2 minutes ago', '5 minutes ago', 'just now', '10 minutes ago',
-  '15 minutes ago', '30 minutes ago', 'an hour ago'
+  '30 minutes ago', '25 minutes ago', '20 minutes ago', '15 minutes ago',
+  '12 minutes ago', '10 minutes ago', '8 minutes ago', '5 minutes ago',
+  '3 minutes ago', '2 minutes ago', 'just now'
 ];
 
 const EnrollmentNotification = () => {
+  const isMobile = useIsMobile();
+  const [usedNames, setUsedNames] = useState<string[]>([]);
+
   // Create a notification at intervals
   useEffect(() => {
     // First notification after 10 seconds
@@ -36,7 +42,7 @@ const EnrollmentNotification = () => {
     // Set up recurring notifications
     const intervalTimer = setInterval(() => {
       showRandomNotification();
-    }, 25000); // Show a notification every 25 seconds
+    }, 5000); // Show a notification every 5 seconds
 
     return () => {
       clearTimeout(firstTimer);
@@ -44,15 +50,37 @@ const EnrollmentNotification = () => {
     };
   }, []);
 
+  const getRandomName = () => {
+    // Filter out already used names
+    const availableNames = southIndianNames.filter(name => !usedNames.includes(name));
+    
+    // If all names have been used, reset the used names array
+    if (availableNames.length === 0) {
+      setUsedNames([]);
+      return southIndianNames[Math.floor(Math.random() * southIndianNames.length)];
+    }
+    
+    const name = availableNames[Math.floor(Math.random() * availableNames.length)];
+    setUsedNames(prev => [...prev, name]);
+    return name;
+  };
+
   const showRandomNotification = () => {
-    const name = southIndianNames[Math.floor(Math.random() * southIndianNames.length)];
+    const name = getRandomName();
     const location = locations[Math.floor(Math.random() * locations.length)];
     const timeframe = timeframes[Math.floor(Math.random() * timeframes.length)];
 
-    toast(`${name} from ${location} enrolled ${timeframe}`, {
-      duration: 4000,
-      className: 'bg-green-50 border-green-200',
-    });
+    toast(
+      <div className="flex items-center gap-2">
+        <Bell className="h-4 w-4 text-green-600" />
+        <span>{name} from {location} enrolled {timeframe}</span>
+      </div>,
+      {
+        duration: 4000,
+        className: 'bg-green-50 border-green-200',
+        position: isMobile ? 'bottom-center' : 'bottom-left',
+      }
+    );
   };
 
   return null; // This component doesn't render anything directly

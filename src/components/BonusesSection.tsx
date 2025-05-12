@@ -7,8 +7,33 @@ import {
   HeartHandshake 
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useEffect, useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const BonusesSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+  
   const bonuses = [
     {
       icon: PenTool,
@@ -43,13 +68,33 @@ const BonusesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" ref={sectionRef}>
       <div className="container-custom">
-        <div className="relative inline-block mb-2">
-          <span className="absolute inset-0 bg-primary/20 rounded-full transform rotate-3"></span>
-          <span className="relative bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">EXCLUSIVE</span>
+        <div className="flex justify-center mb-4">
+          <motion.div
+            className="relative inline-block"
+            animate={isVisible ? { scale: [1, 1.1, 1], y: [0, -5, 0] } : {}}
+            transition={{ 
+              duration: 1.5, 
+              repeat: Infinity, 
+              repeatType: "reverse" 
+            }}
+          >
+            <span className="absolute inset-0 bg-primary/20 rounded-full transform rotate-3"></span>
+            <span className="relative bg-primary text-white px-6 py-2 rounded-full text-sm font-bold">EXCLUSIVE</span>
+          </motion.div>
         </div>
-        <h2 className="section-title">Free Bonuses Worth ₹15,000</h2>
+        
+        <motion.h2 
+          className="section-title"
+          animate={isVisible ? { 
+            textShadow: ["0px 0px 0px rgba(255,121,46,0)", "0px 0px 10px rgba(255,121,46,0.5)", "0px 0px 0px rgba(255,121,46,0)"] 
+          } : {}}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          Free Bonuses Worth ₹15,000
+        </motion.h2>
+        
         <p className="section-subtitle">Included when you enroll during the early bird offer</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
