@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -72,13 +71,6 @@ const PopupForm = () => {
   return (
     <div className="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-xl max-w-md w-full relative overflow-hidden">
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-        >
-          <X className="h-5 w-5" />
-        </button>
-        
         {/* Header */}
         <div className="bg-primary p-5 text-white">
           <h3 className="text-xl font-bold">
