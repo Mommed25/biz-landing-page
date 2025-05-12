@@ -100,9 +100,6 @@ const LimitedTimeCta = ({
           <p className="text-xs text-center md:text-left text-gray-500 mt-2">
             Lifetime access • One-time payment
           </p>
-          <p className="text-sm md:text-base font-semibold text-center md:text-left text-red-500 mt-1">
-            Send payment screenshot to WhatsApp to get access!
-          </p>
         </div>
       </div>
     </div>

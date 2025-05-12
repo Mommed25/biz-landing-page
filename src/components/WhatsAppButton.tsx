@@ -59,9 +59,9 @@ const WhatsAppButton = () => {
           style={{ width: '60px', height: '60px' }}
         >
           <img 
-            src="/lovable-uploads/21a05e39-3804-4ed5-8a2c-ec45df9a7f4d.png" 
+            src="/lovable-uploads/e72b9ebd-f120-41f8-bd54-0902aa8eea5a.png" 
             alt="WhatsApp" 
-            className="w-full h-full"
+            className="w-full h-full rounded-full"
           />
         </div>
       </div>

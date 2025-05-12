@@ -14,14 +14,14 @@ const FeaturedNewsSection = () => {
       <div className="container-custom">
         <h2 className="text-2xl font-bold text-center mb-8">Featured In</h2>
         
-        <div className="flex flex-row justify-center items-center gap-4 md:gap-12 lg:gap-16">
+        <div className="flex flex-row justify-center items-center gap-4 md:gap-12 lg:gap-16 flex-wrap sm:flex-nowrap">
           {newsPortals.map((portal, index) => (
             <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center">
               <img 
                 src={portal.logo} 
                 alt={`${portal.name} Logo`}
                 className="h-auto max-h-10 md:max-h-12 object-contain"
-                style={{ maxWidth: '80px' }}
+                style={{ maxWidth: '100px' }}
               />
             </div>
           ))}

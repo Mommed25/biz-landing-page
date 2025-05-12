@@ -1,14 +1,13 @@
-
 import React from 'react';
 
 const StatsSection = () => {
   const stats = [
     {
-      value: '3.0 Lakh+',
+      value: '3 Lakh+',
       label: 'Students'
     },
     {
-      value: '80 Cr+',
+      value: '₹80 Cr+',
       label: 'Community Earnings'
     },
     {
@@ -24,8 +23,8 @@ const StatsSection = () => {
       label: 'Trainers'
     },
     {
-      value: '8+',
-      label: 'Expertised Mentors'
+      value: '5+',
+      label: 'Years'
     }
   ];
 

@@ -1,4 +1,3 @@
-
 import { Users, Briefcase, PenTool, Home } from 'lucide-react';
 
 const WhoIsThisForSection = () => {
@@ -10,7 +9,7 @@ const WhoIsThisForSection = () => {
     },
     {
       icon: Briefcase,
-      title: 'Professionals',
+      title: 'Working Professionals',
       description: 'Wanting to build additional income streams'
     },
     {
