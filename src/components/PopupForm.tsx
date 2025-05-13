@@ -8,10 +8,8 @@ const PopupForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [step, setStep] = useState(1); // 1: Form, 2: OTP, 3: Success
-  const [otp, setOtp] = useState('');
-  const [generatedOtp, setGeneratedOtp] = useState('');
-
+  const [step, setStep] = useState(1); // 1: Form, 2: Success
+  
   useEffect(() => {
     // Show popup after 3 seconds of page load
     const timer = setTimeout(() => {
@@ -20,13 +18,6 @@ const PopupForm = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const generateOtp = () => {
-    // Generate a 4-digit OTP
-    const newOtp = Math.floor(1000 + Math.random() * 9000).toString();
-    setGeneratedOtp(newOtp);
-    return newOtp;
-  };
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,32 +29,22 @@ const PopupForm = () => {
       return;
     }
     
-    // Generate OTP and move to OTP verification step
-    const newOtp = generateOtp();
-    console.log(`OTP Generated: ${newOtp}`); // For demo purposes
+    // Move directly to success step
     setStep(2);
-  };
-
-  const handleVerifyOtp = (e: React.FormEvent) => {
-    e.preventDefault();
     
-    // Demo verification (in real app, this would check against a server)
-    if (otp === generatedOtp) {
-      setStep(3);
-      // In a real app, you would submit data to server here
+    // In a real app, you would submit data to server here
+    console.log(`Form submitted - Name: ${name}, Phone: ${phone}`);
+    
+    // Close the popup after showing success message
+    setTimeout(() => {
+      setIsOpen(false);
+      // Reset form after closing
       setTimeout(() => {
-        setIsOpen(false);
-        // Reset form after closing
-        setTimeout(() => {
-          setStep(1);
-          setName('');
-          setPhone('');
-          setOtp('');
-        }, 500);
-      }, 3000);
-    } else {
-      alert('Invalid OTP. Please try again.');
-    }
+        setStep(1);
+        setName('');
+        setPhone('');
+      }, 500);
+    }, 3000);
   };
 
   if (!isOpen) return null;
@@ -74,7 +55,7 @@ const PopupForm = () => {
         {/* Header - Center aligned text */}
         <div className="bg-primary p-5 text-white text-center">
           <h3 className="text-xl font-bold">
-            {step === 3 ? 'Thank You!' : 'Start Your Journey To Financial Freedom'}
+            {step === 2 ? 'Thank You!' : 'Start Your Journey To Financial Freedom'}
           </h3>
         </div>
         
@@ -126,67 +107,13 @@ const PopupForm = () => {
           )}
           
           {step === 2 && (
-            <>
-              <p className="mb-4 text-gray-600">
-                Please enter the OTP sent to your WhatsApp number
-              </p>
-              
-              <form onSubmit={handleVerifyOtp} className="space-y-4">
-                <div>
-                  <Label htmlFor="otp">Enter OTP</Label>
-                  <Input 
-                    id="otp"
-                    type="text" 
-                    value={otp}
-                    onChange={(e) => setOtp(e.target.value)}
-                    placeholder="Enter 4-digit OTP"
-                    required
-                    pattern="[0-9]{4}"
-                    maxLength={4}
-                    className="text-center text-lg tracking-wider"
-                  />
-                </div>
-                
-                <Button type="submit" className="w-full">
-                  Verify OTP
-                </Button>
-                
-                <div className="flex justify-between text-xs">
-                  <button 
-                    type="button" 
-                    onClick={() => {
-                      const newOtp = generateOtp();
-                      console.log(`New OTP Generated: ${newOtp}`); // For demo purposes
-                    }} 
-                    className="text-primary hover:underline"
-                  >
-                    Resend OTP
-                  </button>
-                  <button 
-                    type="button" 
-                    onClick={() => setStep(1)} 
-                    className="text-gray-500 hover:underline"
-                  >
-                    Change Number
-                  </button>
-                </div>
-              </form>
-              
-              {/* Demo OTP display - remove this in production */}
-              <p className="mt-4 text-xs text-center bg-yellow-50 p-2 rounded">
-                For demo purposes, your OTP is: <strong>{generatedOtp}</strong>
-              </p>
-            </>
-          )}
-          
-          {step === 3 && (
             <div className="py-8 text-center">
               <div className="mb-4 text-green-500 flex justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold mb-2">Mobile Number Verified</h4>
+              <h4 className="text-xl font-semibold mb-2">Thank You for Your Interest!</h4>
               <p className="text-gray-600">
                 You can now access the website and get yourself enrolled to our course to attain financial freedom.
               </p>

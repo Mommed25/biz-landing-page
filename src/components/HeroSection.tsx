@@ -13,15 +13,19 @@ const HeroSection = () => {
           <p className="text-xl text-gray-600 mb-8">
             Learn practical skills to generate consistent income through digital marketing and affiliate programs
           </p>
-          <Button 
-            size="lg" 
-            className="text-base px-8 py-6 h-auto rounded-full shadow-md"
-            asChild
+          <a 
+            href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
           >
-            <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+            <Button 
+              size="lg" 
+              className="text-base px-8 py-6 h-auto rounded-full shadow-md"
+            >
               Get Started Now
-            </a>
-          </Button>
+            </Button>
+          </a>
         </div>
       </div>
     </section>

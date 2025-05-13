@@ -59,17 +59,21 @@ const PricingSection = () => {
                 ))}
               </ul>
               
-              <Button 
-                className={`btn-primary w-full py-6 text-lg transition-all duration-300 ${isHovered ? 'scale-[1.02] shadow-lg' : ''} flex items-center justify-center gap-2`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                asChild
+              <a 
+                href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full"
               >
-                <a href="https://www.bizgurukul.com/Signup.aspx?id=aBdsUosgN7I=&ref=mxYutvlG9zAWrPOUDsSrsg==&user_id=Jyp7dKMsJlc=&lid=tA0Vq/eD3UTFBKz6B1tcPorQzsL4eJrH">
+                <Button 
+                  className={`w-full py-6 text-lg transition-all duration-300 ${isHovered ? 'scale-[1.02] shadow-lg' : ''} flex items-center justify-center gap-2`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
                   <span>Secure Your Slot Now</span>
                   <Zap className={`h-5 w-5 transition-all ${isHovered ? 'scale-125' : ''}`} />
-                </a>
-              </Button>
+                </Button>
+              </a>
               
               <div className="mt-6 text-center text-sm text-gray-500">
                 <p>Send your payment screenshot to our WhatsApp number</p>
