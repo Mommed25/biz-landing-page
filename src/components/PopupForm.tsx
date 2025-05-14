@@ -24,7 +24,15 @@ const PopupForm = () => {
 
   const handleSubmitForm = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !phone) return;
+    
+    if (!name || !phone) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all fields",
+        variant: "destructive",
+      });
+      return;
+    }
     
     // Validate phone number (10 digits)
     if (!/^\d{10}$/.test(phone)) {
@@ -37,7 +45,6 @@ const PopupForm = () => {
     }
     
     try {
-      // Submit form data to Supabase and notify admin via WhatsApp
       const result = await submitForm(name, phone);
       
       if (result.success) {
@@ -60,6 +67,11 @@ const PopupForm = () => {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
     }
   };
 
