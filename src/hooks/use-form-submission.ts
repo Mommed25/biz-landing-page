@@ -4,7 +4,7 @@ import { saveFormSubmission } from '@/lib/supabase';
 import { toast } from '@/hooks/use-toast';
 
 // Admin WhatsApp number (change this to your admin's number)
-const ADMIN_WHATSAPP = '9XXXXXXXXXX'; // Replace with your actual admin number
+const ADMIN_WHATSAPP = '9656517580'; // Updated with the provided number
 
 // Function to create WhatsApp message URL
 const createWhatsAppUrl = (name: string, phone: string) => {
