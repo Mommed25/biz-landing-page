@@ -3,12 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useFormSubmission } from '@/hooks/use-form-submission';
+import { toast } from '@/hooks/use-toast';
 
 const PopupForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [step, setStep] = useState(1); // 1: Form, 2: Success
+  const { submitForm, isSubmitting } = useFormSubmission();
   
   useEffect(() => {
     // Show popup after 3 seconds of page load
@@ -19,32 +22,45 @@ const PopupForm = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSubmitForm = (e: React.FormEvent) => {
+  const handleSubmitForm = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
     
     // Validate phone number (10 digits)
     if (!/^\d{10}$/.test(phone)) {
-      alert('Please enter a valid 10-digit phone number');
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a valid 10-digit phone number",
+        variant: "destructive",
+      });
       return;
     }
     
-    // Move directly to success step
-    setStep(2);
-    
-    // In a real app, you would submit data to server here
-    console.log(`Form submitted - Name: ${name}, Phone: ${phone}`);
-    
-    // Close the popup after showing success message
-    setTimeout(() => {
-      setIsOpen(false);
-      // Reset form after closing
-      setTimeout(() => {
-        setStep(1);
-        setName('');
-        setPhone('');
-      }, 500);
-    }, 3000);
+    try {
+      // Submit form data to Supabase and notify admin via WhatsApp
+      const result = await submitForm(name, phone);
+      
+      if (result.success) {
+        // Move to success step
+        setStep(2);
+        
+        // Log success message
+        console.log(`Form submitted - Name: ${name}, Phone: ${phone}`);
+        
+        // Close the popup after showing success message
+        setTimeout(() => {
+          setIsOpen(false);
+          // Reset form after closing
+          setTimeout(() => {
+            setStep(1);
+            setName('');
+            setPhone('');
+          }, 500);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   if (!isOpen) return null;
@@ -79,6 +95,7 @@ const PopupForm = () => {
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Enter your full name"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -92,11 +109,12 @@ const PopupForm = () => {
                     placeholder="Enter your 10-digit number"
                     required
                     pattern="[0-9]{10}"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
-                <Button type="submit" className="w-full">
-                  Get Started
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Processing...' : 'Get Started'}
                 </Button>
                 
                 <p className="text-xs text-gray-500 text-center">
