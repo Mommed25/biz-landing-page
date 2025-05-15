@@ -54,11 +54,11 @@ const LimitedTimeCta = ({
         <div>
           <div className="flex items-center gap-2 mb-2">
             <Timer className={cn(
-              "h-5 w-5 text-red-500",
+              "h-5 w-5 text-red-500 flex-shrink-0",
               isBlinking ? "animate-pulse" : ""
             )} />
             <span className={cn(
-              "bg-red-100 text-red-600 text-sm font-semibold px-3 py-1 rounded-full",
+              "bg-red-100 text-red-600 text-sm font-semibold px-3 py-1 rounded-full whitespace-nowrap",
               isBlinking ? "bg-red-200" : ""
             )}>
               ⚠️ Only {remainingSlots} slots remaining at 30% off! ⚠️

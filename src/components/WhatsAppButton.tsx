@@ -53,7 +53,7 @@ const WhatsAppButton = () => {
       <div className="flex items-center">
         {(isHovered || isPulsing) && (
           <div className="mr-3 bg-red-50 text-gray-800 py-2 px-4 rounded-l-full shadow-lg animate-fade-in border border-red-200">
-            <span className="font-medium text-red-600">⚠️ Only 4 slots left at 30% off!</span>
+            <span className="font-medium text-red-600 whitespace-nowrap">⚠️ Only 4 slots left at 30% off!</span>
           </div>
         )}
         <div className={`${isPulsing ? 'scale-110' : ''} transition-all duration-300`}>
