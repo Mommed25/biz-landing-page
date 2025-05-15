@@ -20,7 +20,7 @@ export const useFormSubmission = () => {
     
     try {
       // First, try to insert the data into Supabase
-      let { error } = await supabase
+      const { error } = await supabase
         .from('leads')
         .insert([{ name, phone }]);
       
@@ -31,6 +31,8 @@ export const useFormSubmission = () => {
           description: "Could not save your information, but we'll still contact you.",
           variant: "destructive",
         });
+      } else {
+        console.log('Lead successfully saved to Supabase');
       }
       
       // Even if database save fails, we can still notify admin via WhatsApp
