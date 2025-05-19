@@ -42,7 +42,7 @@ const EnrollmentNotification = () => {
     // Set up recurring notifications
     const intervalTimer = setInterval(() => {
       showRandomNotification();
-    }, 5000); // Show a notification every 5 seconds
+    }, 8000); // Changed from 5000 to 8000 (8 seconds between notifications)
 
     return () => {
       clearTimeout(firstTimer);
