@@ -79,6 +79,8 @@ const EnrollmentNotification = () => {
         duration: 4000,
         className: 'bg-green-50 border-green-200',
         position: isMobile ? 'bottom-center' : 'bottom-left',
+        // Set a fixed z-index that's below the navbar
+        style: { zIndex: 40 }
       }
     );
   };
