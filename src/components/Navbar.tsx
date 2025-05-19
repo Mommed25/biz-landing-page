@@ -40,7 +40,7 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <nav className="md:hidden pt-4 pb-4 px-6 bg-white border-t mt-4">
+        <nav className="md:hidden pt-4 pb-4 px-6 bg-white border-t mt-4 z-50">
           <div className="flex flex-col space-y-4">
             <a href="#about" className="text-gray-700 hover:text-primary transition-colors py-2">About</a>
             <a href="#features" className="text-gray-700 hover:text-primary transition-colors py-2">Features</a>
