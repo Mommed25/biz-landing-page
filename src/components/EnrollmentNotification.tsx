@@ -80,7 +80,7 @@ const EnrollmentNotification = () => {
         className: 'bg-green-50 border-green-200',
         position: isMobile ? 'bottom-center' : 'bottom-left',
         style: { 
-          zIndex: 40,
+          zIndex: 50,
           position: 'fixed',
           bottom: '16px',
           left: isMobile ? '50%' : '16px',
