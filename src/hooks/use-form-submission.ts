@@ -3,15 +3,6 @@ import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import { toast } from '@/hooks/use-toast';
 
-// Admin WhatsApp number
-const ADMIN_WHATSAPP = '9656517580';
-
-// Function to create WhatsApp message URL
-const createWhatsAppUrl = (name: string, phone: string) => {
-  const message = encodeURIComponent(`New Lead Alert!\nName: ${name}\nPhone: ${phone}\nPlease contact them soon.`);
-  return `https://wa.me/${ADMIN_WHATSAPP}?text=${message}`;
-};
-
 export const useFormSubmission = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -19,7 +10,7 @@ export const useFormSubmission = () => {
     setIsSubmitting(true);
     
     try {
-      // First, try to insert the data into Supabase
+      // Save lead data to Supabase
       const { error } = await supabase
         .from('leads')
         .insert([{ name, phone }]);
@@ -28,21 +19,27 @@ export const useFormSubmission = () => {
         console.error('Supabase error:', error);
         toast({
           title: "Database Error",
-          description: "Could not save your information, but we'll still contact you.",
+          description: "Could not save your information. Please try again.",
           variant: "destructive",
         });
-      } else {
-        console.log('Lead successfully saved to Supabase');
-      }
+        
+        setIsSubmitting(false);
+        return { success: false, error };
+      } 
       
-      // Even if database save fails, we can still notify admin via WhatsApp
-      const whatsappUrl = createWhatsAppUrl(name, phone);
+      console.log('Form submitted - Name:', name, 'Phone:', phone);
+      console.info('Lead successfully saved to Supabase');
       
-      // Open WhatsApp link in a new tab
-      window.open(whatsappUrl, '_blank');
+      // Show success toast
+      toast({
+        title: "Thank you!",
+        description: "Your information has been received. We'll contact you soon.",
+        variant: "default",
+      });
       
       setIsSubmitting(false);
       return { success: true };
+      
     } catch (error) {
       console.error('Form submission error:', error);
       setIsSubmitting(false);
